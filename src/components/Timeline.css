@@ -1,0 +1,10 @@
+.Timeline-vertical-line{
+  border-left: 2px solid rgb(53, 53, 53);
+  height: 500px;
+  left: 50%;
+  top:21%;
+  height: 67%;
+  position: absolute;
+}
+
+
