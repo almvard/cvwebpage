@@ -25,7 +25,7 @@ p{
 }
 
 h2{
-    font-size: 48px;
+    font-size: 5vw;
 }
 
 .profile-info-button{
@@ -58,15 +58,22 @@ h2{
 @media screen and (max-width: 990px) {
     .profile-align{
         align-items: center;
+        margin-top: 10px;
     }
 } 
 
 @media screen and (max-width: 470px) {
+    h2{
+        font-size: 7vw;
+    }
     .profile-pic{
-        width: 90%;
-        height: 90%; 
+        width: 80%;
+        height: 80%; 
         border-radius: 200px;
     }
 
+    .profile-more-wrapper{
+        display: none;
+    }
     
 } 

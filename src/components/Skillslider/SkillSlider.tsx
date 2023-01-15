@@ -1,6 +1,6 @@
 import "./SkillSlider.css";
 import { useTransition } from "react-transition-state";
-import { useRef, useLayoutEffect, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 interface IProps {
   skill: string;
@@ -9,13 +9,6 @@ interface IProps {
 
 export const SkillSlider = ({ skill, skillLevel }: IProps) => {
   const ref = useRef(null);
-
-  // useEffect(() => {
-  //   if (ref.current) {
-  //     //@ts-ignore
-  //     ref.current.style.width = `${skillLevel}%`;
-  //   }
-  // }, []);
 
   useEffect(() => {
     const handleScroll = () => {

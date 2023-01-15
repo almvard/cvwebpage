@@ -1,28 +1,14 @@
-import { Header } from "./components/Header";
-import { Profile } from "./components/Profile";
-import { Experience } from "./components/Experience";
+import { Header } from "./components/Header/Header";
+import { Profile } from "./components/Profile/Profile";
+import { WorkExperiences } from "./components/WorkExperience/WorkExperience";
 
 import "./App.css";
 import { useEffect, useRef, useState } from "react";
-import { SkillSlider } from "./components/SkillSlider";
+import { SkillSlider } from "./components/Skillslider/SkillSlider";
+import { skills } from "./assets/data";
 
 export const App = () => {
   const boxRef = useRef<HTMLDivElement>(null);
-  const skills = [
-    { skill: "React", skillLevel: 60 },
-    { skill: "Typescript", skillLevel: 70 },
-    { skill: "CSS/Less", skillLevel: 60 },
-    { skill: "HTML", skillLevel: 60 },
-    { skill: "Git", skillLevel: 50 },
-    { skill: "Azure", skillLevel: 40 },
-    { skill: "Jira", skillLevel: 60 },
-    { skill: "Java", skillLevel: 20 },
-    { skill: "SQL", skillLevel: 30 },
-    { skill: "Axure", skillLevel: 40 },
-    { skill: "Adobe XD", skillLevel: 30 },
-    { skill: "Svenska", skillLevel: 100 },
-    { skill: "Engelska", skillLevel: 100 },
-  ];
 
   const [y, setY] = useState<number | undefined>();
 
@@ -54,14 +40,12 @@ export const App = () => {
           <Profile onClick={handleClick} />
         </section>
         <section className={"app-second-content"} ref={boxRef}>
-          <section className={""}>
-            <div className={"app-skillslider-container"}>
-              {skills.map((item) => (
-                <SkillSlider skill={item.skill} skillLevel={item.skillLevel} />
-              ))}
-            </div>
-          </section>
-          <Experience />
+          <div className={"app-skillslider-container"}>
+            {skills.map((item) => (
+              <SkillSlider skill={item.skill} skillLevel={item.skillLevel} />
+            ))}
+          </div>
+          <WorkExperiences />
         </section>
       </div>
     </div>

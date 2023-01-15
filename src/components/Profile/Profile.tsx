@@ -1,5 +1,5 @@
 import "./Profile.css";
-import pic from "../assets/profilepic.png";
+import pic from "../../assets/profilepic.png";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
 export const Profile = ({ onClick }: { onClick: () => void }) => {
