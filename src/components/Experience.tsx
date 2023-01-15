@@ -13,7 +13,6 @@ export const Experience = () => {
     education: IExperienceObj[];
     other: IExperienceObj[];
   }
-
   const tmp: IExperience = {
     work: [
       {
@@ -21,7 +20,7 @@ export const Experience = () => {
         place: "Handelsbanken AB",
         years: "2020-2022",
         description:
-          "Arbetar i ett agilt team med både frontend och backendutvecklare, UX, testare, scrum master och produktägare. Huvudfokus är att utveckla ny funk1onalitet för området Pension och försäkring ut mot kund. Frontend är byggd i React/typescript med LESS för styling. Backend är byggd i Java. Här har jag utvecklats till att kunna ta en mer ledande roll för vår frontend.",
+          "Arbetar i ett agilt team med både frontend och backendutvecklare, UX, testare, scrum master och produktägare. Huvudfokus är att utveckla ny funktionalitet för området Pension och försäkring ut mot kund. Frontend är byggd i React/typescript med LESS för styling. Backend är byggd i Java. Här har jag utvecklats till att kunna ta en mer ledande roll för vår frontend.",
       },
       {
         label: "Fullstack developer",
@@ -33,18 +32,18 @@ export const Experience = () => {
     ],
     education: [
       {
-        label: "Linköpings universitet",
-        place: "Handelsbanken AB",
-        years: "2019-2021",
-        description: "lorem ipsum",
+        label: "Kandidatexamen, Systemvetenskap inriktning Systemutveckling",
+        place: "Linköpings universitet",
+        years: "2018-2021",
       },
     ],
     other: [
       {
         label: "Aktivitetansvarig",
         place: "Handelsbanken AB",
-        years: "2021-2021",
-        description: "loremi ipsum",
+        years: "2019-2020",
+        description:
+          "Aktivitetsansvarig för programmets förening som arbetar för ökad jämlikhet inom IT. Arbetet innebar planerande och ansvar för genomförandet av alla aktiviteter och event som anordnades.",
       },
     ],
   };
@@ -75,14 +74,7 @@ export const Experience = () => {
   };
 
   return (
-    <div
-      className="row"
-      style={{
-        width: "100%",
-        backgroundColor: "#1987542e",
-        borderRadius: "10px",
-      }}
-    >
+    <div className={"row experience-container"}>
       <div className="col-2"></div>
       <div className="col-10">
         <div className={"experience-group-container"}>
@@ -95,8 +87,8 @@ export const Experience = () => {
         <div className={"experience-group-container"}>
           <div className={"experience-timeline"} />
           <h3>{"Utbildning"}</h3>
-          {tmp.education.map((edu) => (
-            <DisplayExperience {...edu} />
+          {tmp.education.map((education) => (
+            <DisplayExperience {...education} />
           ))}
         </div>
         <div className={"experience-group-container"}>
